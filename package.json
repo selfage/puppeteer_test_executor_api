@@ -1,0 +1,39 @@
+{
+  "name": "@selfage/puppeteer_test_executor_api",
+  "version": "1.0.1",
+  "description": "API definitions in browser context when executed by @selfage/puppeteer_test_executor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selfage/puppeteer_test_executor_api.git"
+  },
+  "keywords": [
+    "Global",
+    "Window",
+    "Browser",
+    "Puppeteer",
+    "Context",
+    "Environment",
+    "Test",
+    "Testing",
+    "Development",
+    "Executor",
+    "Launcher",
+    "TypeScript"
+  ],
+  "author": "Yuxuan Xie <teststaybaka@gmail.com> (http://www.yuxuanxie.com)",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/selfage/puppeteer_test_executor_api/issues"
+  },
+  "homepage": "https://github.com/selfage/puppeteer_test_executor_api#readme",
+  "main": "./apis.js",
+  "types": "./apis.d.ts",
+  "files": [
+    "**/*.d.ts",
+    "**/*.js"
+  ],
+  "devDependencies": {
+    "@selfage/tsconfig": "^1.0.7",
+    "typescript": "^4.1.3"
+  }
+}
