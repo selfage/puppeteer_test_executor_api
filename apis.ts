@@ -2,7 +2,7 @@ declare var argv: Array<string>;
 declare function exit(): void;
 declare function screenshot(
   relativePath: string,
-  options: { delay?: number; fullPage?: boolean; quality?: number }
+  options?: { delay?: number; fullPage?: boolean; quality?: number }
 ): Promise<void>;
 declare function fileExists(relativePath: string): Promise<boolean>;
 declare function readFile(
