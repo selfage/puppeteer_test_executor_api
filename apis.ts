@@ -7,12 +7,14 @@ declare function screenshot(
 declare function fileExists(relativePath: string): Promise<boolean>;
 declare function readFile(
   relativePath: string,
-  // Not use BufferEncoding to avoid dependency on @types/node
-  encoding?: string
-): Promise<string | ArrayBuffer>;
+  // An encoding is mandatory because raw buffer data cannot be transmitted
+  // correctly. Refer to BufferEncoding for all supported strings.
+  encoding: string
+): Promise<string>;
 declare function writeFile(
   relativePath: string,
-  data: ArrayBuffer
+  // Represented as a binary string.
+  data: string
 ): Promise<void>;
 declare function deleteFile(relativePath: string): Promise<void>;
 declare function setViewport(width: number, height: number): Promise<void>;
