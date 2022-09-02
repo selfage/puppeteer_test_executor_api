@@ -2,7 +2,7 @@ declare var puppeteerArgv: Array<string>;
 declare function puppeteerExit(): void;
 declare function puppeteerScreenshot(
   relativePath: string,
-  options?: { delay?: number; fullPage?: boolean; quality?: number }
+  options?: { delay?: number /* ms */; fullPage?: boolean; quality?: number }
 ): Promise<void>;
 declare function puppeteerFileExists(relativePath: string): Promise<boolean>;
 declare function puppeteerReadFile(
@@ -25,7 +25,9 @@ declare function puppeteerMockExactFile(
   originalUrl: string,
   relativePath: string
 ): void;
-declare function puppeteerWaitForFileChooser(): void;
+declare function puppeteerWaitForFileChooser(
+  delayAfter?: number /* ms */
+): Promise<void>;
 declare function puppeteerFileChooserAccept(
-  relativePaths: Array<string>
+  ...relativePaths: Array<string>
 ): Promise<void>;
