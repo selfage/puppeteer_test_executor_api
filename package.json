@@ -1,6 +1,6 @@
 {
   "name": "@selfage/puppeteer_test_executor_api",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "API definitions in browser context when executed by @selfage/puppeteer_test_executor",
   "repository": {
     "type": "git",
