@@ -17,5 +17,15 @@ declare function puppeteerWriteFile(
   data: string
 ): Promise<void>;
 declare function puppeteerDeleteFile(relativePath: string): Promise<void>;
-declare function puppeteerSetViewport(width: number, height: number): Promise<void>;
-declare function puppeteerMockExactFile(originalUrl: string, relativePath: string): void;
+declare function puppeteerSetViewport(
+  width: number,
+  height: number
+): Promise<void>;
+declare function puppeteerMockExactFile(
+  originalUrl: string,
+  relativePath: string
+): void;
+declare function puppeteerWaitForFileChooser(): void;
+declare function puppeteerFileChooserAccept(
+  relativePaths: Array<string>
+): Promise<void>;
