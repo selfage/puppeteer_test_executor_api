@@ -10,9 +10,21 @@ export function exit(): void {
 
 export function screenshot(
   relativePath: string,
-  options?: { delay?: number /* ms */; fullPage?: boolean; quality?: number }
+  {
+    delay = 0,
+    fullPage,
+    quality,
+  }: {
+    delay?: number; // ms
+    fullPage?: boolean;
+    quality?: number;
+  } = {}
 ): Promise<void> {
-  return globalThis.puppeteerScreenshot(relativePath, options);
+  return globalThis.puppeteerScreenshot(relativePath, {
+    delay,
+    fullPage,
+    quality,
+  });
 }
 
 export function fileExists(relativePath: string): Promise<boolean> {

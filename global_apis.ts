@@ -2,7 +2,7 @@ declare var puppeteerArgv: Array<string>;
 declare function puppeteerExit(): void;
 declare function puppeteerScreenshot(
   relativePath: string,
-  options?: { delay?: number /* ms */; fullPage?: boolean; quality?: number }
+  options: { delay?: number /* ms */; fullPage?: boolean; quality?: number }
 ): Promise<void>;
 declare function puppeteerFileExists(relativePath: string): Promise<boolean>;
 declare function puppeteerReadFile(
