@@ -1,6 +1,6 @@
 {
   "name": "@selfage/puppeteer_test_executor_api",
-  "version": "4.2.1",
+  "version": "5.0.0",
   "description": "API exposed in browser context when executed by @selfage/puppeteer_test_executor",
   "repository": {
     "type": "git",
@@ -33,8 +33,8 @@
     "**/*.js"
   ],
   "devDependencies": {
-    "@selfage/cli": "^4.0.0",
+    "@selfage/cli": "^5.0.0",
     "@selfage/tsconfig": "^1.0.7",
-    "typescript": "^4.1.3"
+    "typescript": "^5.4.4"
   }
 }
