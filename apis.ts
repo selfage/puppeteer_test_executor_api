@@ -79,3 +79,57 @@ export function setViewport(width: number, height: number): Promise<void> {
 export function mockExactFile(originalUrl: string, relativePath: string): void {
   return globalThis.puppeteerMockExactFile(originalUrl, relativePath);
 }
+
+export function mouseClick(x: number, y: number): Promise<void> {
+  return globalThis.puppeteerMouseClick(x, y);
+}
+
+export function mouseMove(
+  x: number,
+  y: number,
+  steps: number,
+): Promise<void> {
+  return globalThis.puppeteerMouseMove(x, y, steps);
+}
+
+export function mouseDown(): Promise<void> {
+  return globalThis.puppeteerMouseDown();
+}
+
+export function mouseUp(): Promise<void> {
+  return globalThis.puppeteerMouseUp();
+}
+
+export function mouseWheel(deltaX: number, deltaY: number): Promise<void> {
+  return globalThis.puppeteerMouseWheel(deltaX, deltaY);
+}
+
+export function touchTap(x: number, y: number): Promise<void> {
+  return globalThis.puppeteerTouchTap(x, y);
+}
+
+export function touchStart(x: number, y: number): Promise<void> {
+  return globalThis.puppeteerTouchStart(x, y);
+}
+
+export function touchMove(x: number, y: number): Promise<void> {
+  return globalThis.puppeteerTouchMove(x, y);
+}
+
+export function touchEnd(): Promise<void> {
+  return globalThis.puppeteerTouchEnd();
+}
+
+export function keyboardType(text: string): Promise<void> {
+  return globalThis.puppeteerKeyboardType(text);
+}
+
+export type KeyInput = puppeteerKeyInput;
+
+export function keyboardDown(key: KeyInput): Promise<void> {
+  return globalThis.puppeteerKeyboardDown(key);
+}
+
+export function keyboardUp(key: KeyInput): Promise<void> {
+  return globalThis.puppeteerKeyboardUp(key);
+}
