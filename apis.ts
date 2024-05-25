@@ -52,6 +52,14 @@ export function deleteFile(relativePath: string): Promise<void> {
   return globalThis.puppeteerDeleteFile(relativePath);
 }
 
+export async function forceDeleteFile(relativePath: string): Promise<void> {
+  try {
+    await deleteFile(relativePath)
+  } catch {
+    // Ignore failure.
+  }
+}
+
 export async function getFiles(
   ...relativePaths: Array<string>
 ): Promise<FileList> {
@@ -98,6 +106,14 @@ export function mouseDown(): Promise<void> {
 
 export function mouseUp(): Promise<void> {
   return globalThis.puppeteerMouseUp();
+}
+
+export async function forceMouseUp(): Promise<void> {
+  try {
+    await mouseUp();
+  } catch {
+    // Ignore failure.
+  }
 }
 
 export function mouseWheel(deltaX: number, deltaY: number): Promise<void> {
